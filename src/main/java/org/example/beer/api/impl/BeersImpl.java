@@ -30,7 +30,7 @@ public class BeersImpl implements Beers {
 
 	@Override
 	public void updateBeer(int beerId, Beer data) {
-	    System.out.println("" + data);
+	    System.out.println("Updating beer: " + data);
 	}
 
 	@Override
@@ -57,6 +57,6 @@ public class BeersImpl implements Beers {
 
 	@Override
 	public void addBeer(Beer data) {
-	}
+	    System.out.println("Adding beer: " + data);	}
 
 }

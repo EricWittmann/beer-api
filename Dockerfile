@@ -8,8 +8,8 @@ WORKDIR /opt/beer-api
 
 ADD ${RELEASE_PATH} /opt/beer-api
 
-RUN groupadd -r dgroup -g 1001 \
-    && useradd -u 1001 -r -g dgroup -d /opt/beer-api/ -s /sbin/nologin -c "Docker image user" duser \
+RUN groupadd -r duser -g 1001 \
+    && useradd -u 1001 -r -g duser -d /opt/beer-api/ -s /sbin/nologin -c "Docker image user" duser \
     && chown -R duser:duser /opt/beer-api/ \
     && chgrp -R 0 /opt/beer-api && chmod -R g=u /opt/beer-api
 
